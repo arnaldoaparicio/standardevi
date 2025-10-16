@@ -9,5 +9,5 @@ Just plug in some numbers and BOOM! You got your Standard Deviation!
 
 ## Updates
 
-Update 10/16/2025 2:02pm EST
+Update 10/16/2025 2:04pm EST
 Finish the 'standard_deviation' method. It's very bloated but soon I'll do red, green, refactor to split up a lot of stuff going on.
