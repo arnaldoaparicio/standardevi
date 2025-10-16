@@ -23,10 +23,10 @@ class StandardDev
     second_power_list = []
 
     deviation_list.each do |deviation|
-      square = deviation * deviation
-      square_list << square
+      second_power = deviation * deviation
+      second_power_list << second_power
     end
-    square_list
+    second_power_list
   end
 
   def standard_deviation
