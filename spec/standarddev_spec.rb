@@ -43,4 +43,10 @@ RSpec.describe StandardDev do
 
     expect(standarddev.second_power_deviations_sum).to eq(387.5)
   end
+
+  it 'returns the correct denominator for the Formula of Sample Standard Deviation' do
+    standarddev = StandardDev.new([26, 11, 29, 31, 21, 11])
+
+    expect(standarddev.sample_standard_deviation_denominator).to eq(5)
+  end
 end
