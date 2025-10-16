@@ -37,4 +37,10 @@ RSpec.describe StandardDev do
 
     expect(standarddev.second_power_deviations).to eq([20.25, 110.25, 56.25, 90.25, 0.25, 110.25])
   end
+
+  it 'adds all of the deviations that were raised to the 2nd power' do
+    standarddev = StandardDev.new([26, 11, 29, 31, 21, 11])
+
+    expect(standarddev.second_power_deviations_sum).to eq(387.5)
+  end
 end
