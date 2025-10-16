@@ -33,10 +33,14 @@ class StandardDev
     second_power_deviations.sum
   end
 
-  def standard_deviation
-    closer = second_power_deviations_sum / (set.count - 1)
-    final = Math.sqrt(closer)
+  def sample_standard_deviation_denominator
+    @data_set.count - 1
+  end
 
-    final.round(2)
+  def standard_deviation
+    closer = second_power_deviations_sum / sample_standard_deviation_denominator
+    sample_standard_deviation = Math.sqrt(closer)
+
+    sample_standard_deviation.round(2)
   end
 end
