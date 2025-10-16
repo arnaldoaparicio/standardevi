@@ -22,4 +22,10 @@ RSpec.describe StandardDev do
 
     expect(standarddev.mean([26, 11, 29, 31, 21, 11])).to eq(21.5)
   end
+
+  it 'returns the deviation to each respective number in a set' do
+    standarddev = StandardDev.new
+
+    expect(standarddev.deviation_list([26, 11, 29, 31, 21, 11])).to eq([4.5, -10.5, 7.5, 9.5, -0.5, -10.5])
+  end
 end
