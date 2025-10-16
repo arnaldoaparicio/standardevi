@@ -1,5 +1,5 @@
 class StandardDev
-  def initialize(_data_set)
+  def initialize
     @data_set = []
   end
 end
