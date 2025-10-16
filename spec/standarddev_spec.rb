@@ -7,4 +7,10 @@ RSpec.describe StandardDev do
 
     expect(standarddev).to be_a(StandardDev)
   end
+
+  it 'returns the Standard Deviation of a data set' do
+    standarddev = StandardDev.new
+
+    expect(standarddev.standard_deviation([26, 11, 29, 31, 21, 11])).to eq(8.80)
+  end
 end
