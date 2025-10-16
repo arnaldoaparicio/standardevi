@@ -1,22 +1,35 @@
 class StandardDev
-  def initialize
-    @data_set = []
+  attr_reader :data_set
+
+  def initialize(data_set)
+    @data_set = data_set
   end
 
-  def standard_deviation(set)
-    sum_of_set = set.sum
-    mean = sum_of_set.to_f / set.count
-    deviation_list = []
-    square_list = []
+  def mean
+    @data_set.sum.to_f / @data_set.count
+  end
 
-    set.each do |s|
-      deviation = s - mean
-      deviation_list << deviation
+  def deviation_list
+    deviations = []
+
+    @data_set.each do |value|
+      deviation = value - mean
+      deviations << deviation
     end
+    deviations
+  end
+
+  def second_power_deviations
+    second_power_list = []
+
     deviation_list.each do |deviation|
       square = deviation * deviation
       square_list << square
     end
+    square_list
+  end
+
+  def standard_deviation
     square_list_sum = square_list.sum
 
     closer = square_list_sum / (set.count - 1)
