@@ -19,18 +19,18 @@ class StandardDev
     deviations
   end
 
-  def second_power_deviations
-    second_power_list = []
+  def squared_deviations
+    squared_deviations_list = []
 
     deviation_list.each do |deviation|
-      second_power = deviation * deviation
-      second_power_list << second_power
+      squared_deviation = deviation * deviation
+      squared_deviations_list << squared_deviation
     end
-    second_power_list
+    squared_deviations_list
   end
 
-  def second_power_deviations_sum
-    second_power_deviations.sum
+  def squared_deviations_sum
+    squared_deviations.sum
   end
 
   def sample_standard_deviation_denominator
@@ -38,7 +38,7 @@ class StandardDev
   end
 
   def standard_deviation
-    closer = second_power_deviations_sum / sample_standard_deviation_denominator
+    closer = squared_deviations_sum / sample_standard_deviation_denominator
     sample_standard_deviation = Math.sqrt(closer)
 
     sample_standard_deviation.round(2)
