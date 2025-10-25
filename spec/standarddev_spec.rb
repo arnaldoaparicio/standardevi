@@ -14,10 +14,10 @@ RSpec.describe StandardDev do
     ssd3 = StandardDev.new([17, 22, 40, 54, 73, 101])
     ssd4 = StandardDev.new([1175, 1189, 1229, 1349, 1398, 1450])
 
-    expect(ssd1.standard_deviation).to eq(8.80)
-    expect(ssd2.standard_deviation).to eq(7.97)
-    expect(ssd3.standard_deviation).to eq(31.97)
-    expect(ssd4.standard_deviation).to eq(116.17)
+    expect(ssd1.sample_standard_deviation).to eq(8.80)
+    expect(ssd2.sample_standard_deviation).to eq(7.97)
+    expect(ssd3.sample_standard_deviation).to eq(31.97)
+    expect(ssd4.sample_standard_deviation).to eq(116.17)
   end
 
   it 'returns the mean of a data set' do
