@@ -49,4 +49,10 @@ RSpec.describe StandardDev do
 
     expect(ssd.sample_standard_deviation_denominator).to eq(5)
   end
+
+  it 'calculates the sample variance' do
+    ssd = StandardDev.new([26, 11, 29, 31, 21, 11])
+
+    expect(ssd.sample_variance).to eq(77.5)
+  end
 end
