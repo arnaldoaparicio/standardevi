@@ -37,10 +37,13 @@ class StandardDev
     @data_set.count - 1
   end
 
-  def standard_deviation
-    closer = squared_deviations_sum / sample_standard_deviation_denominator
-    sample_standard_deviation = Math.sqrt(closer)
+  def sample_variance
+    squared_deviations_sum / sample_standard_deviation_denominator
+  end
 
-    sample_standard_deviation.round(2)
+  def sample_standard_deviation
+    ssd = Math.sqrt(sample_variance)
+
+    ssd.round(2)
   end
 end
