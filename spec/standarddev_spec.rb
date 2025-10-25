@@ -32,16 +32,16 @@ RSpec.describe StandardDev do
     expect(ssd.deviation_list).to eq([4.5, -10.5, 7.5, 9.5, -0.5, -10.5])
   end
 
-  it 'raises each deviation to the 2nd power' do
+  it 'squares each deviation' do
     ssd = StandardDev.new([26, 11, 29, 31, 21, 11])
 
-    expect(ssd.second_power_deviations).to eq([20.25, 110.25, 56.25, 90.25, 0.25, 110.25])
+    expect(ssd.squared_deviations).to eq([20.25, 110.25, 56.25, 90.25, 0.25, 110.25])
   end
 
-  it 'adds all of the deviations that were raised to the 2nd power' do
+  it 'adds all of the deviations that were squared' do
     ssd = StandardDev.new([26, 11, 29, 31, 21, 11])
 
-    expect(ssd.second_power_deviations_sum).to eq(387.5)
+    expect(ssd.squared_deviations_sum).to eq(387.5)
   end
 
   it 'returns the correct denominator for the Formula of Sample Standard Deviation' do
